@@ -1,6 +1,7 @@
 import { Seo } from "@/ui/component/seo";
 import { Button } from "@/ui/design-system/button/button";
 import { Typography } from "@/ui/design-system/typography/typography";
+import { MdCommit } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -32,6 +33,24 @@ export default function Home() {
         <Button variant="accent" size="large">
           Accent
         </Button>
+        <Button
+          variant="icon"
+          size="large"
+          icon={{ icon: MdCommit }}
+          iconTheme="accent"
+        />
+        <Button
+          variant="icon"
+          size="large"
+          icon={{ icon: MdCommit }}
+          iconTheme="secondary"
+        />
+        <Button
+          variant="icon"
+          size="large"
+          icon={{ icon: MdCommit }}
+          iconTheme="gray"
+        />
       </div>
     </>
   );

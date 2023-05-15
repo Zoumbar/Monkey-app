@@ -1,9 +1,10 @@
 import clsx from "clsx";
+import { IconProps } from "@/types/iconProps";
 
 interface Props {
   size?: "small" | "medium" | "large";
   variant?: "accent" | "secondary" | "outline" | "disabled" | "icon";
-  icon?: any;
+  icon?: IconProps;
   iconTheme?: "accent" | "secondary" | "gray";
   iconPosition?: "left" | "right";
   disabled?: boolean;
@@ -41,31 +42,60 @@ export const Button = ({
         "bg-gray-400 border border-gray-500 text-gray-600 rounded cursor-not-allowed";
       break;
     case "icon":
-      variantStyles = "";
+      if (iconTheme === "accent") {
+        // default
+        variantStyles =
+          "bg-primary hover:bg-primary-400 text-white rounded-full";
+      }
+      if (iconTheme === "secondary") {
+        variantStyles =
+          "bg-primary-200 hover:bg-primary-300/50 text-primary rounded-full";
+      }
+      if (iconTheme === "gray") {
+        variantStyles = "bg-gray-700 hover:bg-gray-600 text-white rounded-full";
+      }
+
       break;
   }
 
   switch (size) {
     case "small":
-      sizeStyles = "text-caption3 font-medium px-[14px] py-[12px]";
+      sizeStyles = `text-caption3 font-medium ${
+        variant === "icon"
+          ? "flex items-center justify-center w-[40px] h-[40px]"
+          : "px-[14px] py-[12px]"
+      }`;
+      iconSize = 18;
       break;
     case "medium": // default
-      sizeStyles = "text-caption2 font-medium px-[18px] py-[15px]";
+      sizeStyles = `text-caption2 font-medium ${
+        variant === "icon"
+          ? "flex items-center justify-center w-[50px] h-[50px]"
+          : "px-[18px] py-[15px]"
+      }`;
+      iconSize = 20;
       break;
     case "large":
-      sizeStyles = "text-caption1 font-medium px-[22px] py-[18px]";
+      sizeStyles = `text-caption1 font-medium ${
+        variant === "icon"
+          ? "flex items-center justify-center w-[60px] h-[60px]"
+          : "px-[22px] py-[18px]"
+      }`;
+      iconSize = 24;
       break;
   }
   return (
-    <>
-      <button
-        type="button"
-        className={clsx(variantStyles, sizeStyles)}
-        onClick={() => console.log("coucou")}
-        disabled={disabled}
-      >
-        {children}
-      </button>
-    </>
+    <button
+      type="button"
+      className={clsx(variantStyles, sizeStyles, iconSize, "")}
+      onClick={() => console.log("coucou")}
+      disabled={disabled}
+    >
+      {icon && variant === "icon" ? (
+        <icon.icon size={iconSize} />
+      ) : (
+        <>{children}</>
+      )}
+    </button>
   );
 };
