@@ -21,8 +21,17 @@ export default function Home() {
           CouCou Bande De Nouilles
         </Typography>
       </div> */}
-      <div className="space-y-5">
-        <Button>Accent</Button>
+      <div className="flex items-center gap-4 p-10 ">
+        <Button variant="outline">Accent</Button>
+        <Button variant="secondary" size="small">
+          Accent
+        </Button>
+        <Button variant="disabled" disabled>
+          Accent
+        </Button>
+        <Button variant="accent" size="large">
+          Accent
+        </Button>
       </div>
     </>
   );
