@@ -1,4 +1,5 @@
 import { Seo } from "@/ui/component/seo";
+import { Avatar } from "@/ui/design-system/avatar/avatar";
 import { Button } from "@/ui/design-system/button/button";
 import { Logo } from "@/ui/design-system/logo/logo";
 import { Spinner } from "@/ui/design-system/spinner/spinner";
@@ -184,6 +185,28 @@ export default function Home() {
               <Logo size="medium" />
               <Logo size="small" />
               <Logo size="very-small" />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <Typography component="p" weight="medium" variant="caption2">
+              Avatars
+            </Typography>
+            <div className="flex items-center gap-2 p-5 border border-gray-400 rounded">
+              <Avatar
+                size="large"
+                src="/assets/images/avatar1.png"
+                alt="Avatar Test"
+              />
+              <Avatar
+                size="medium"
+                src="/assets/images/avatar1.png"
+                alt="Avatar Test"
+              />
+              <Avatar
+                size="small"
+                src="/assets/images/avatar1.png"
+                alt="Avatar Test"
+              />
             </div>
           </div>
         </div>
