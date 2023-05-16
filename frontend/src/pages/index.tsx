@@ -1,5 +1,6 @@
 import { Seo } from "@/ui/component/seo";
 import { Button } from "@/ui/design-system/button/button";
+import { Logo } from "@/ui/design-system/logo/logo";
 import { Spinner } from "@/ui/design-system/spinner/spinner";
 import { Typography } from "@/ui/design-system/typography/typography";
 import { MdNotificationsActive } from "react-icons/md";
@@ -155,8 +156,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Spinners */}
+
         <div className="flex items-start gap-7">
+          {/* Spinners */}
           <div className="space-y-2">
             <Typography component="p" weight="medium" variant="caption2">
               Spinners
@@ -170,6 +172,18 @@ export default function Home() {
               <Spinner size="large" variant="white" />
               <Spinner size="medium" variant="white" />
               <Spinner size="small" variant="white" />
+            </div>
+          </div>
+          {/* Logos */}
+          <div className="space-y-2">
+            <Typography component="p" weight="medium" variant="caption2">
+              Logos
+            </Typography>
+            <div className="flex items-center gap-2 p-5 border border-gray-400 rounded">
+              <Logo size="large" />
+              <Logo size="medium" />
+              <Logo size="small" />
+              <Logo size="very-small" />
             </div>
           </div>
         </div>
