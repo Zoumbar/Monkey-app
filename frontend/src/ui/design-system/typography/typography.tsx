@@ -70,7 +70,7 @@ export const Typography = ({
       variantStyles = "text-base";
       break;
     case "body-sm":
-      variantStyles = "text-h2";
+      variantStyles = "text-sm";
       break;
     case "caption1":
       variantStyles = "text-caption1";
