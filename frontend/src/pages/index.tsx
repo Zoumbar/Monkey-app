@@ -24,7 +24,12 @@ export default function Home() {
       </div> */}
       <div className="flex items-center gap-4 p-10 ">
         <Button variant="outline">Accent</Button>
-        <Button variant="secondary" size="small">
+        <Button
+          variant="secondary"
+          size="small"
+          icon={{ icon: MdCommit }}
+          iconPosition="left"
+        >
           Accent
         </Button>
         <Button variant="disabled" disabled>

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { IconProps } from "@/types/iconProps";
+import { IconProps } from "@/types/IconProps";
 
 interface Props {
   size?: "small" | "medium" | "large";
@@ -94,7 +94,11 @@ export const Button = ({
       {icon && variant === "icon" ? (
         <icon.icon size={iconSize} />
       ) : (
-        <>{children}</>
+        <div className={clsx(icon && "flex items-center gap-1")}>
+          {icon && iconPosition === "left" && <icon.icon size={iconSize} />}
+          {children}
+          {icon && iconPosition === "right" && <icon.icon size={iconSize} />}
+        </div>
       )}
     </button>
   );
