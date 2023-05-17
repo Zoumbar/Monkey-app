@@ -23,64 +23,78 @@ export const footerAppLinks: AppLinks[] = [
     type: "external",
   },
 ];
-export const footerUsersLinks: AppLinks[] = [
+export const footerUserLinks: AppLinks[] = [
   {
     label: "Mon espace",
-    baseUrl: "/",
+    baseUrl: "/monkey-space",
     type: "internal",
   },
   {
     label: "Connexion",
-    baseUrl: "/",
+    baseUrl: "/sign-in",
     type: "internal",
   },
   {
     label: "Inscription",
-    baseUrl: "/",
+    baseUrl: "/sign-up",
     type: "internal",
   },
   {
     label: "Mot de passe oublié",
-    baseUrl: "/",
+    baseUrl: "/forget-password",
     type: "internal",
   },
 ];
 export const footerInformationLinks: AppLinks[] = [
   {
     label: "CGU",
-    baseUrl: "/",
+    baseUrl: "/cgu",
     type: "internal",
   },
   {
     label: "Confidentialité",
-    baseUrl: "/",
+    baseUrl: "/confidentialité",
     type: "internal",
   },
   {
     label: "À propos",
-    baseUrl: "/",
-    type: "internal",
-  },
-  {
-    label: "À propos",
-    baseUrl: "/",
+    baseUrl: "/about",
     type: "internal",
   },
 ];
 export const footerRSLinks: AppLinks[] = [
   {
     label: "Linkedin",
-    baseUrl: "/",
+    baseUrl: "/linkedin",
     type: "external",
   },
   {
     label: "Youtube",
-    baseUrl: "/",
+    baseUrl: "/youtube",
     type: "external",
   },
   {
     label: "Slack",
-    baseUrl: "/",
+    baseUrl: "/slack",
     type: "external",
+  },
+];
+
+export const footerLinks = [
+  {
+    label: "App",
+    links: footerAppLinks,
+  },
+  {
+    label: "Utilisateurs",
+    links: footerUserLinks,
+  },
+  {
+    label: "Informations",
+    links: footerInformationLinks,
+  },
+  {
+    label: "Réseaux",
+    links: footerRSLinks,
   },
 ];

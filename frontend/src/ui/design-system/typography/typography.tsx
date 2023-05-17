@@ -23,7 +23,7 @@ interface Props {
   theme?: "black" | "gray" | "white" | "primary" | "secondary";
   weight?: "regular" | "medium";
   className?: string;
-  children: React.ReactNode | void[];
+  children: React.ReactNode;
 }
 
 export const Typography = ({

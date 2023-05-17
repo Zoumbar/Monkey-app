@@ -1,12 +1,17 @@
 import { Typography } from "@/ui/design-system/typography/typography";
 import { Container } from "../container/container";
 import Image from "next/image";
-import { footerAppLinks } from "./app-links";
-import { v4 as uuidv4 } from "uuid";
+import { footerAppLinks, footerLinks, footerUserLinks } from "./app-links";
+import { uuid } from "uuidv4";
 import { ActiveLink } from "./active-link";
+import { AppLinks, FooterLinks } from "@/types/AppLinks";
+import { LinkTypes } from "@/lib/link-types";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const footerNavigationList = footerLinks.map((colLinks) => (
+    <FooterLink key={uuid()} data={colLinks} />
+  ));
 
   return (
     <div className="bg-gray">
@@ -27,9 +32,7 @@ export const Footer = () => {
             />
           </a>
         </div>
-        <div className="">
-          <FooterLinks />
-        </div>
+        <div className="flex gap-7">{footerNavigationList}</div>
       </Container>
       <Container className="pt-9 pb-11 space-y-11">
         <hr className="text-gray-800"></hr>
@@ -37,7 +40,7 @@ export const Footer = () => {
           <Typography variant="caption4" theme="gray">
             {`Copyright © ${currentYear} | Propulsed by `}
             <a href="https://esteban-ouvre.tk" target="_blank">
-              Esteban Ouvrés
+              Esteban Ouvré
             </a>
           </Typography>
           <div className=""></div>
@@ -46,21 +49,23 @@ export const Footer = () => {
     </div>
   );
 };
-
-const FooterLinks = () => {
-  const linksList = footerAppLinks.map((link) => (
-    <div key={uuidv4()}>
-      {link.type === "internal" && (
+interface footerLinkProps {
+  data: FooterLinks;
+}
+const FooterLink = ({ data }: footerLinkProps) => {
+  const linksList = data.links.map((link) => (
+    <div key={uuid()}>
+      {link.type === LinkTypes.INTERNAL && (
         <ActiveLink href={link.baseUrl}>{link.label}</ActiveLink>
       )}
-      {link.type === "external" && (
+      {/* On utilise la lib perso LinkTypes pour pas mettre la propriété "internal/external" en dur */}
+      {link.type === LinkTypes.EXTERNAL && (
         <a href={link.baseUrl} target="_blank">
           {link.label}
         </a>
       )}
     </div>
   ));
-  console.log(linksList.keys());
   return (
     <div className="min-w-[190px]">
       <Typography
@@ -69,7 +74,7 @@ const FooterLinks = () => {
         weight="medium"
         className="pb-5"
       >
-        Titre
+        {data.label}
       </Typography>
       <Typography theme="gray" variant="caption3" className="space-y-4">
         {linksList}
