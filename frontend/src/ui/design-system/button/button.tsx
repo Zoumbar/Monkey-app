@@ -93,7 +93,7 @@ export const Button = ({
         sizeStyles,
         iconSize,
         isLoading && "cursor-wait",
-        "relative"
+        "relative animate"
       )}
       onClick={() => console.log("coucou")}
       disabled={disabled}
