@@ -66,19 +66,19 @@ export const footerInformationLinks: AppLinks[] = [
 export const footerRSLinks: AppLinks[] = [
   {
     label: "Linkedin",
-    baseUrl: "/linkedin",
+    baseUrl: "https://www.linkedin.com/",
     type: "external",
     icon: FaLinkedin, // On rajoute l'icon dans l'objet directement et on ajouter le type icontype dans le fichier applinks
   },
   {
     label: "Youtube",
-    baseUrl: "/youtube",
+    baseUrl: "https://www.youtube.com/",
     type: "external",
     icon: FaYoutube,
   },
   {
     label: "Slack",
-    baseUrl: "/slack",
+    baseUrl: "https://slack.com/",
     type: "external",
     icon: FaSlack,
   },

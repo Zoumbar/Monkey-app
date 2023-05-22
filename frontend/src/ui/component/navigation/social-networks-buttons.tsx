@@ -19,6 +19,8 @@ export const SocialNetworksButtons = ({
       variant="icon"
       iconTheme={theme}
       icon={{ icon: socialNetwork.icon ? socialNetwork.icon : FaFacebook }}
+      baseUrl={socialNetwork.baseUrl}
+      linkType={socialNetwork.type}
     />
   ));
 
