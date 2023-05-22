@@ -1,4 +1,5 @@
 import { AppLinks } from "@/types/AppLinks";
+import { FaLinkedin, FaSlack, FaYoutube } from "react-icons/fa";
 
 export const footerAppLinks: AppLinks[] = [
   {
@@ -67,16 +68,19 @@ export const footerRSLinks: AppLinks[] = [
     label: "Linkedin",
     baseUrl: "/linkedin",
     type: "external",
+    icon: FaLinkedin, // On rajoute l'icon dans l'objet directement et on ajouter le type icontype dans le fichier applinks
   },
   {
     label: "Youtube",
     baseUrl: "/youtube",
     type: "external",
+    icon: FaYoutube,
   },
   {
     label: "Slack",
     baseUrl: "/slack",
     type: "external",
+    icon: FaSlack,
   },
 ];
 

@@ -1,16 +1,18 @@
 import { Typography } from "@/ui/design-system/typography/typography";
 import { Container } from "../container/container";
 import Image from "next/image";
-import { footerAppLinks, footerLinks, footerUserLinks } from "./app-links";
-import { uuid } from "uuidv4";
+import { footerLinks } from "./app-links";
+import { v4 as uuidv4 } from "uuid";
 import { ActiveLink } from "./active-link";
-import { AppLinks, FooterLinks } from "@/types/AppLinks";
+import { FooterLinks } from "@/types/AppLinks";
 import { LinkTypes } from "@/lib/link-types";
+import { SocialNetworksButtons } from "./social-networks-buttons";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  // On va mapper les footerLinks définis dans le fichier app-links
   const footerNavigationList = footerLinks.map((colLinks) => (
-    <FooterLink key={uuid()} data={colLinks} />
+    <FooterLink key={uuidv4()} data={colLinks} />
   ));
 
   return (
@@ -43,18 +45,23 @@ export const Footer = () => {
               Esteban Ouvré
             </a>
           </Typography>
-          <div className=""></div>
+          <div className="">
+            <SocialNetworksButtons theme="gray" />
+          </div>
         </div>
       </Container>
     </div>
   );
 };
+// Interface pour les Props des links du footer
 interface footerLinkProps {
   data: FooterLinks;
 }
+// on créé un composant de liste de lien qu'on va integrer dans le footer.
 const FooterLink = ({ data }: footerLinkProps) => {
+  // On map les liens qu'on lui passe en props et on met la structure en place
   const linksList = data.links.map((link) => (
-    <div key={uuid()}>
+    <div key={uuidv4()}>
       {link.type === LinkTypes.INTERNAL && (
         <ActiveLink href={link.baseUrl}>{link.label}</ActiveLink>
       )}

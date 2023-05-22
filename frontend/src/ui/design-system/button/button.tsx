@@ -53,7 +53,7 @@ export const Button = ({
           "bg-primary-200 hover:bg-primary-300/50 text-primary rounded-full";
       }
       if (iconTheme === "gray") {
-        variantStyles = "bg-gray-700 hover:bg-gray-600 text-white rounded-full";
+        variantStyles = "bg-gray-800 hover:bg-gray-700 text-white rounded-full";
       }
 
       break;
@@ -95,7 +95,6 @@ export const Button = ({
         isLoading && "cursor-wait",
         "relative animate"
       )}
-      onClick={() => console.log("coucou")}
       disabled={disabled}
     >
       {isLoading && (
