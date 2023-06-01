@@ -1,3 +1,4 @@
+import { CallToActionView } from "@/ui/design-system/call-to-action/call-to-action.view";
 import { CurrentCourseCtaView } from "./current-course-cta/current-course-cta.view";
 import { FeaturedView } from "./featured/featured.view";
 import { HeroTopView } from "./hero-top/hero-top.view";
@@ -12,6 +13,7 @@ export const LandingPageView = () => {
       <SlackView />
       <CurrentCourseCtaView />
       <HighlightListView />
+      <CallToActionView />
     </>
   );
 };
