@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Seo title="Monkey's" description="Description..." />
-      <Layout>
+      <Layout isDisplayBreadcrumbs={false}>
         <LandingPageView />
       </Layout>
     </>
