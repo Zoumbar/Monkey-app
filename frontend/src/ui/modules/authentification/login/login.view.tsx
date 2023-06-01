@@ -11,7 +11,7 @@ export const LoginView = () => {
       <div className="bg-primary">
         <div className="relative w-full h-[531px]">
           <Image
-            src="/assets/images/character-1.png"
+            src="/assets/images/character-2.png"
             alt="Illustration de connexion"
             fill
             className="object-scale-down"
@@ -22,12 +22,12 @@ export const LoginView = () => {
         <Box padding_y="py-5">
           <div className="flex items-center justify-between">
             <Typography variant="h5" component="h5">
-              Inscription
+              Connexion
             </Typography>
             <Typography variant="caption4" component="span" theme="gray">
-              Tu as déjà un compte ?
+              Tu n’as pas de compte ?
               <Link href="/connexion" className="text-primary ml-2">
-                Connexion
+                S’inscrire
               </Link>
             </Typography>
           </div>
