@@ -46,11 +46,6 @@ export const Breadcrumbs = () => {
     </div>
   ));
 
-  console.log("router :", router);
-  console.log("asPath :", asPath);
-  console.log("segment :", segments);
-  console.log("last segment :", lastSegment);
-
   return (
     <Container className="flex items-center gap-2 py-7">
       {view}
