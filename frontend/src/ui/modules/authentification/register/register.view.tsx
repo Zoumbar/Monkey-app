@@ -8,7 +8,7 @@ import { RegisterForm } from "./register.form";
 export const RegisterView = () => {
   return (
     <Container className="grid grid-cols-2 gap-20 mb-32">
-      <div className="bg-primary">
+      <div className="">
         <div className="relative w-full h-[531px]">
           <Image
             src="/assets/images/character-1.png"
@@ -18,7 +18,7 @@ export const RegisterView = () => {
           />
         </div>
       </div>
-      <div className="bg-secondary flex items-center">
+      <div className=" flex items-center">
         <Box padding_y="py-5">
           <div className="flex items-center justify-between">
             <Typography variant="h5" component="h5">
