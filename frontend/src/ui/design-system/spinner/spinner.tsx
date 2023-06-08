@@ -38,13 +38,13 @@ export const Spinner = ({ size = "medium", variant = "primary" }: Props) => {
       x="0px"
       y="0px"
       viewBox="0 0 100 100"
-      enable-background="new 0 0 0 0"
+      enableBackground="new 0 0 0 0"
       xmlSpace="preserve"
     >
       <circle
         fill="none"
         stroke="currentColor"
-        stroke-width="4"
+        strokeWidth="4"
         cx="50"
         cy="50"
         r="44"
@@ -53,7 +53,7 @@ export const Spinner = ({ size = "medium", variant = "primary" }: Props) => {
       <circle
         fill="#fff"
         stroke="currentColor"
-        stroke-width="3"
+        strokeWidth="3"
         cx="8"
         cy="54"
         r="6"
