@@ -22,6 +22,8 @@ interface Props {
   baseUrl?: string;
   linkType?: LinkType;
   action?: Function;
+  type?: "button" | "submit";
+  fullwidth?: boolean;
 }
 export const Button = ({
   size = "medium",
@@ -34,6 +36,8 @@ export const Button = ({
   children,
   baseUrl,
   linkType = "internal",
+  type = "button",
+  fullwidth = false,
   action = () => {},
 }: Props) => {
   let variantStyles: string = "",
@@ -136,11 +140,12 @@ export const Button = ({
 
   const buttonElement = (
     <button
-      type="button"
+      type={type}
       className={clsx(
         variantStyles,
         sizeStyles,
         iconSize,
+        fullwidth && "w-full",
         isLoading && "cursor-wait",
         "relative animate"
       )}

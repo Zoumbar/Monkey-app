@@ -4,8 +4,13 @@ import { Typography } from "@/ui/design-system/typography/typography";
 import Image from "next/image";
 import Link from "next/link";
 import { RegisterForm } from "./register.form";
+import { FormsType } from "@/types/Forms";
 
-export const RegisterView = () => {
+interface Props {
+  form: FormsType;
+}
+
+export const RegisterView = ({ form }: Props) => {
   return (
     <Container className="grid grid-cols-2 gap-20 mb-32">
       <div className="">
@@ -31,7 +36,7 @@ export const RegisterView = () => {
               </Link>
             </Typography>
           </div>
-          <RegisterForm />
+          <RegisterForm form={form} />
         </Box>
       </div>
     </Container>
