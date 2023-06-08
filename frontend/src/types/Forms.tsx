@@ -17,3 +17,7 @@ export interface LoginFormFieldsType {
   email: string;
   password: string;
 }
+
+export interface ForgetPasswordFormFieldsType {
+  email: string;
+}

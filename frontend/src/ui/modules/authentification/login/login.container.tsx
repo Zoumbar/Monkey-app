@@ -19,10 +19,6 @@ export const LoginContainer = () => {
     console.log("formdata", formData);
   };
   return (
-    <>
-      <LoginView
-        form={{ errors, register, handleSubmit, onSubmit, isLoading }}
-      />
-    </>
+    <LoginView form={{ errors, register, handleSubmit, onSubmit, isLoading }} />
   );
 };
