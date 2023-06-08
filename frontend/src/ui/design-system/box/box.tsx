@@ -16,7 +16,7 @@ export const Box = ({
   return (
     <div
       className={clsx(
-        "w-full border border-gray-400 bg-white rounded",
+        "w-full border border-gray-500 bg-white rounded",
         padding_x,
         padding_y,
         className

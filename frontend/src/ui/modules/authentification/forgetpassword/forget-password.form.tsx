@@ -7,7 +7,6 @@ interface Props {
 }
 export const ForgetPasswordForm = ({ form }: Props) => {
   const { onSubmit, errors, isLoading, register, handleSubmit } = form;
-  console.log("form", form);
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="pt-8 pb-5 space-y-5">
       <Input
