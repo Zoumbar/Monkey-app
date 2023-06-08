@@ -38,36 +38,6 @@ export const RegisterForm = ({ form }: Props) => {
         errorMsg="tu dois renseigner ce champ"
         id="text"
       />
-      {/* <input
-        type="email"
-        placeholder="johndoe@gmail.com"
-        className=""
-        disabled={isLoading}
-        {...register("email", {
-          required: { value: true, message: "Ce champ est requis !" },
-        })}
-        autoComplete="off"
-      ></input>
-      <input
-        type="password"
-        placeholder="Entre ton mot de passe"
-        className=""
-        disabled={isLoading}
-        {...register("password", {
-          required: { value: true, message: "Ce champ est requis !" },
-        })}
-        autoComplete="off"
-      ></input>
-      <input
-        type="text"
-        placeholder="Comment nous avez vous connu ?"
-        className=""
-        disabled={isLoading}
-        {...register("how_known", {
-          required: { value: true, message: "Ce champ est requis !" },
-        })}
-        autoComplete="off"
-      ></input> */}
       <Button isLoading={isLoading} type="submit" fullwidth>
         S'inscrire
       </Button>
