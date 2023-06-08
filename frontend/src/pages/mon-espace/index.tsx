@@ -9,7 +9,7 @@ export default function Login() {
         title="Mon espace"
         description="Bienvenue sur votre espace personnel"
       />
-      <Layout>
+      <Layout withSidebar>
         <UserAccountContainer />
       </Layout>
     </>
