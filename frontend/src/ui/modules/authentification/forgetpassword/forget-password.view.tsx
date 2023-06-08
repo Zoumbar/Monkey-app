@@ -18,6 +18,7 @@ export const ForgetPasswordView = ({ form }: Props) => {
             alt="Illustration de connexion"
             fill
             className="object-scale-down"
+            priority
           />
         </div>
       </div>

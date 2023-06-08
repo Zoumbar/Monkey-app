@@ -20,6 +20,7 @@ export const LoginView = ({ form }: Props) => {
             alt="Illustration de connexion"
             fill
             className="object-scale-down"
+            priority
           />
         </div>
       </div>
